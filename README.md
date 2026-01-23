@@ -1,6 +1,8 @@
 # OFL Synthesis
 
-Facilitation knowledge base, evaluation frameworks, and research for the Open Facilitation Library.
+Knowledge base, evaluation frameworks, and research for the [Open Facilitation Library](https://github.com/Open-Facilitation-Library).
+
+> **[Browse the wiki](https://open-facilitation-library.github.io/synthesis-quartz/)** for seminars, research summaries, and documentation.
 
 ## Contents
 
@@ -28,6 +30,11 @@ Literature and references supporting OFL development.
 ## Contributing
 
 We welcome contributions to the knowledge base, evaluation frameworks, and research references.
+
+## Stay Connected
+
+- **[Subscribe on Substack](https://openfac.substack.com)** - Updates on OFL research and community
+- **[Support on Giveth](https://giveth.io/project/open-facilitation-library)** - Help fund open facilitation standards
 
 ## License
 
