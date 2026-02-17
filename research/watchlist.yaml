@@ -1,0 +1,481 @@
+# OFL AI Facilitation Research Watchlist
+# Researchers and conferences to monitor for new workflows and methods
+#
+# Usage: Check Google Scholar alerts monthly. When a relevant paper appears,
+# evaluate whether it documents a new AI facilitation workflow or enriches
+# an existing one in products/.
+#
+# Last updated: 2026-02-17
+
+# ============================================
+# RESEARCHERS
+# ============================================
+# Tiers:
+#   core     — actively building AI facilitation systems
+#   methods  — contributing key algorithms/frameworks (social choice, alignment, bridging)
+#   domain   — bridging peacebuilding, conflict resolution, or governance with AI
+#   monitor  — important adjacent work, check periodically
+
+researchers:
+
+  # --- CORE: Building AI facilitation systems ---
+
+  - name: Andrew Konya
+    affiliation: Remesh (Chief Science Officer)
+    tier: core
+    scholar: https://scholar.google.com/citations?user=9JlvqbQAAAAJ
+    website: https://andrewkonya.com/
+    topics:
+      - collective dialogue platforms
+      - bridging-based ranking
+      - AI-assisted peacebuilding
+      - democratic policy development
+    key_papers:
+      - "Using Collective Dialogues and AI to Find Common Ground (FAccT 2025)"
+      - "Democratic Policy Development using Collective Dialogues and AI (2023)"
+      - "Chain of Alignment: Integrating Public Will (NeurIPS 2024 workshop)"
+      - "AI and the Future of Digital Public Squares (2024)"
+      - "Deliberative Technology for Alignment (2023)"
+    workflows: [remesh]
+
+  - name: Michiel A. Bakker
+    affiliation: Google DeepMind / MIT Sloan
+    tier: core
+    scholar: https://scholar.google.com/citations?user=9H74p5MAAAAJ
+    website: https://miba.dev/
+    topics:
+      - AI mediation
+      - consensus generation
+      - pluralistic alignment
+      - scaffolding cooperation
+    key_papers:
+      - "AI can help humans find common ground in democratic deliberation (Science 2024)"
+      - "Can AI Mediation Improve Democratic Deliberation? (Knight/Columbia 2025)"
+      - "Fine-tuning language models to find agreement (NeurIPS 2022)"
+      - "Scaffolding cooperation in human groups with deep RL (Nature Human Behaviour 2023)"
+      - "Supernotes: Driving Consensus in Crowd-Sourced Fact-Checking (WWW 2025)"
+      - "Benchmarking Overton Pluralism in LLMs (ICLR 2026)"
+    workflows: [habermas-machine]
+
+  - name: Michael Henry Tessler
+    affiliation: Google DeepMind
+    tier: core
+    scholar: https://scholar.google.com/citations?user=kFgWNMIAAAAJ
+    topics:
+      - AI mediation
+      - consensus generation
+      - value profiles
+      - language agents as representatives
+    key_papers:
+      - "AI can help humans find common ground in democratic deliberation (Science 2024)"
+      - "Language agents as digital representatives in collective decision-making (NeurIPS 2023 workshop)"
+      - "Value Profiles for Encoding Human Variation (EMNLP 2025)"
+    workflows: [habermas-machine]
+
+  - name: Luke Thorburn
+    affiliation: King's College London
+    tier: core
+    scholar: https://scholar.google.com/citations?user=VNF3f_QAAAAJ
+    website: https://www.lukethorburn.com/
+    topics:
+      - bridging systems
+      - recommender systems and polarization
+      - democratic AI frameworks
+      - AI ethics of influence
+    key_papers:
+      - "Bridging Systems: Open Problems for Countering Destructive Divisiveness (Knight/Columbia 2023)"
+      - "Democratic AI is Possible: The Democracy Levels Framework (ICML 2025)"
+      - "The Moral Case for Using Language Model Agents for Recommendation (Inquiry 2025)"
+      - "Community by Design (2025)"
+      - "Societal Sorting as a Systemic Risk of Recommenders (RecSys 2024)"
+    workflows: [remesh]
+
+  # --- METHODS: Key algorithms and frameworks ---
+
+  - name: Ariel D. Procaccia
+    affiliation: Harvard University
+    tier: methods
+    scholar: https://scholar.google.com/citations?user=8ZpV-lkAAAAJ
+    website: https://procaccia.info/
+    topics:
+      - computational social choice
+      - generative social choice
+      - citizens' assemblies
+      - AI alignment as social choice
+      - bridging algorithms
+    key_papers:
+      - "Generative Social Choice (EC 2024, JACM forthcoming)"
+      - "The Structure of Bridging (2026 working paper)"
+      - "Axioms for AI Alignment from Human Feedback (NeurIPS 2024 spotlight)"
+      - "Now We're Talking: Better Deliberation Groups (AAAI 2023)"
+      - "Question the Questions: Auditing Representation in Online Deliberative Processes (TheWebConf 2026)"
+      - "The Impact of Advanced AI Systems on Democracy (Nature Human Behaviour 2025)"
+    workflows: []
+    note: >
+      Prolific — publishes 10+ relevant papers/year. His "Generative Social Choice"
+      framework (LLMs + social choice guarantees) is foundational for AI-facilitated
+      deliberation. Track his publications page directly.
+
+  - name: Aviv Ovadya
+    affiliation: AI & Democracy Foundation / Berkman Klein Center, Harvard
+    tier: methods
+    topics:
+      - democratic AI governance
+      - bridging systems
+      - deliberative alignment
+    key_papers:
+      - "Deliberative Technology for Alignment (2023)"
+      - "Democratic AI is Possible: The Democracy Levels Framework (ICML 2025)"
+      - "AI and the Future of Digital Public Squares (2024)"
+    note: >
+      Connective tissue across the field — co-authors with Konya, Thorburn,
+      Bakker, and Procaccia. Runs the Deliberative Alignment Forum.
+
+  - name: Daniel Halpern
+    affiliation: Harvard University
+    tier: methods
+    scholar: https://scholar.google.com/citations?user=RuXNlCIAAAAJ
+    topics:
+      - AI alignment axioms
+      - liquid democracy
+      - federated assemblies
+      - pluralistic alignment
+    key_papers:
+      - "Axioms for AI Alignment from Human Feedback (NeurIPS 2024 spotlight)"
+      - "Federated Assemblies (AAAI 2025 oral)"
+      - "Tracking Truth with Liquid Democracy (Management Science 2025)"
+      - "Pairwise Calibrated Rewards for Pluralistic Alignment (NeurIPS 2025)"
+    note: Procaccia's most frequent co-author. Focus on formal guarantees for democratic AI.
+
+  - name: Christopher Summerfield
+    affiliation: Google DeepMind / University of Oxford
+    tier: methods
+    topics:
+      - AI mediation
+      - democratic deliberation
+      - cognitive science of AI
+    key_papers:
+      - "AI can help humans find common ground (Science 2024)"
+      - "Can AI Mediation Improve Democratic Deliberation? (2025)"
+      - "How will advanced AI systems impact democracy? (Nature Human Behaviour 2025)"
+    note: Senior author / PI on Habermas Machine line of work.
+
+  - name: Martin Saveski
+    affiliation: University of Washington
+    tier: methods
+    topics:
+      - community notes / fact-checking
+      - bridging algorithms at scale
+      - crowd-sourced consensus
+    key_papers:
+      - "Supernotes: Driving Consensus in Crowd-Sourced Fact-Checking (WWW 2025)"
+      - "Scaling Human Judgment in Community Notes with LLMs (2025)"
+    note: Builds practical AI bridging systems at Twitter/X Community Notes scale.
+
+  - name: Divya Siddarth
+    affiliation: Microsoft Research / Plurality Institute
+    tier: methods
+    topics:
+      - collective intelligence
+      - plurality
+      - community design
+      - digital democracy
+    key_papers:
+      - "Community by Design (2025, with Thorburn, Weyl, Audrey Tang)"
+      - "How large language models can reshape collective intelligence (Nature Human Behaviour 2024)"
+    note: Bridges tech industry (Microsoft), civic tech, and academic research.
+
+  - name: Amy X. Zhang
+    affiliation: University of Washington
+    tier: methods
+    topics:
+      - online deliberation platforms
+      - democratic AI
+      - social computing
+    key_papers:
+      - "Democratic AI is Possible: The Democracy Levels Framework (ICML 2025)"
+      - "Chain of Alignment (NeurIPS 2024 workshop)"
+
+  # --- DOMAIN: Peacebuilding & conflict resolution + AI ---
+
+  - name: Lisa Schirch
+    affiliation: University of Notre Dame, Kroc Institute / Toda Peace Institute
+    tier: domain
+    scholar: https://scholar.google.com/citations?user=Haf7FL0AAAAJ
+    topics:
+      - peacetech
+      - deliberative technology for peacebuilding
+      - social media and conflict
+      - tech for social cohesion
+    key_papers:
+      - "Deliberative Technology: Designing AI and Computational Democracy for Peacebuilding (Toda 2024)"
+      - "The Case for Designing Tech for Social Cohesion (Yale JLH 2023)"
+      - "Social Media Impacts on Conflict and Democracy (Routledge 2021)"
+    note: >
+      Runs the Peacetech and Polarization Lab (PTAP) at Notre Dame and the
+      Council on Tech and Social Cohesion's Deliberative Tech Hub (~100 experts).
+      Key bridge between peacebuilding community and deliberative tech builders.
+
+  - name: Oded Adomi Leshem
+    affiliation: Hebrew University of Jerusalem
+    tier: domain
+    scholar: https://scholar.google.com/citations?user=Z_RDhsUAAAAJ
+    topics:
+      - conflict psychology
+      - hope and intractable conflicts
+      - intervention tournaments
+    key_papers:
+      - "Lay Theories of Peace and Their Influence on Policy Preference (PNAS 2020)"
+      - "Hope Amidst Conflict (Oxford University Press 2024, book)"
+    note: Political psychologist. Domain expertise for Israeli-Palestinian dialogue work.
+
+  - name: Colin Irwin
+    affiliation: University of Liverpool
+    tier: domain
+    topics:
+      - peace polls
+      - democratic policy development
+      - public opinion in conflict
+    key_papers:
+      - "Democratic Policy Development using Collective Dialogues and AI (2023)"
+      - "Using Artificial Intelligence for Peacebuilding (J. Peacebuilding & Development 2022)"
+    note: Long-running peace polls methodology. Collaborated with Konya on UN Libya work.
+
+  # --- MONITOR: Adjacent important work ---
+
+  - name: Deger Turan
+    affiliation: AI Objectives Institute
+    tier: monitor
+    topics:
+      - deliberative alignment
+      - Talk to the City
+    key_papers:
+      - "Deliberative Technology for Alignment (2023)"
+    workflows: [talk-to-the-city]
+    note: Leads AI Objectives Institute, which builds Talk to the City.
+
+  - name: E. Glen Weyl
+    affiliation: Microsoft Research / Plurality Institute
+    tier: monitor
+    topics:
+      - plurality
+      - radical markets
+      - community design
+    key_papers:
+      - "Community by Design (2025)"
+    note: Influential on the "plurality" movement. Co-authored with Audrey Tang.
+
+  - name: Raphael Koster
+    affiliation: Google DeepMind
+    tier: monitor
+    topics:
+      - multi-agent cooperation
+      - AI mediation
+    key_papers:
+      - "AI can help humans find common ground (Science 2024)"
+      - "Can AI Mediation Improve Democratic Deliberation? (2025)"
+    note: Technical contributor to Habermas Machine.
+
+  - name: Iason Gabriel
+    affiliation: Google DeepMind
+    tier: monitor
+    topics:
+      - AI ethics
+      - value alignment
+    key_papers:
+      - "Can AI Mediation Improve Democratic Deliberation? (2025)"
+      - "Value Profiles for Encoding Human Variation (EMNLP 2025)"
+    note: Ethics and values alignment perspective within the DeepMind team.
+
+  - name: Sara Fish
+    affiliation: Harvard University
+    tier: monitor
+    topics:
+      - generative social choice
+    key_papers:
+      - "Generative Social Choice (EC 2024, JACM forthcoming)"
+      - "Generative Social Choice: The Next Generation (ICML 2025 oral)"
+    note: Co-lead on generative social choice with Procaccia.
+
+  - name: Itai Shapira
+    affiliation: Harvard University
+    tier: monitor
+    topics:
+      - AI alignment axioms
+      - social choice for AI
+      - bridging
+    key_papers:
+      - "Axioms for AI Alignment from Human Feedback (NeurIPS 2024 spotlight)"
+      - "The Structure of Bridging (2026 working paper)"
+    note: Frequent Procaccia co-author on AI alignment + social choice.
+
+# ============================================
+# CONFERENCES
+# ============================================
+
+conferences:
+
+  - name: ACM Collective Intelligence (CI)
+    url: https://ci.acm.org/
+    frequency: annual
+    typical_month: August
+    relevance: core
+    description: >
+      Premier venue for collective intelligence research — human, AI, and hybrid.
+      Directly covers AI facilitation, crowd wisdom, group decision-making.
+
+  - name: ACM FAccT
+    url: https://facctconference.org/
+    frequency: annual
+    typical_month: June
+    relevance: core
+    description: >
+      Fairness, Accountability, and Transparency. Major venue for AI governance,
+      democratic AI, and deliberation papers. Where the Remesh peacebuilding paper
+      (arxiv:2503.01769) was published.
+
+  - name: ACM CHI
+    url: https://chi.acm.org/
+    frequency: annual
+    typical_month: April
+    relevance: high
+    description: >
+      Human-Computer Interaction. Covers collaborative AI systems, online
+      deliberation platforms, and social computing.
+
+  - name: NeurIPS
+    url: https://neurips.cc/
+    frequency: annual
+    typical_month: December
+    relevance: high
+    description: >
+      Top ML venue. Relevant workshops: Pluralistic Alignment, Foundation Models
+      for Decision Making, NLP for Democracy. Habermas Machine precursor published
+      here (2022). Procaccia's alignment axioms (2024 spotlight).
+    watch_workshops:
+      - Pluralistic Alignment
+      - NLP for Democracy
+      - Foundation Models for Decision Making
+
+  - name: ICML
+    url: https://icml.cc/
+    frequency: annual
+    typical_month: July
+    relevance: high
+    description: >
+      Top ML venue. Democracy Levels framework published as position paper (2025).
+      Generative Social Choice: The Next Generation (2025 oral).
+
+  - name: AAAI
+    url: https://aaai.org/
+    frequency: annual
+    typical_month: February
+    relevance: medium
+    description: >
+      Broad AI conference. "Now We're Talking" deliberation groups paper (2023).
+      Federated Assemblies (2025 oral). Citizens' assembly algorithms.
+
+  - name: ACM EC (Economics and Computation)
+    url: https://ec.sigecom.org/
+    frequency: annual
+    typical_month: July
+    relevance: medium
+    description: >
+      Computational economics and social choice. Generative Social Choice
+      published here (2024). Procaccia and Halpern publish here frequently.
+
+  - name: ACM TheWebConf (WWW)
+    url: https://www.iw3c2.org/
+    frequency: annual
+    typical_month: April
+    relevance: medium
+    description: >
+      Web research. Supernotes/Community Notes paper (2025). Engagement-diversity
+      tradeoffs (2024). Online deliberation audits (2026).
+
+  - name: AIES (AI, Ethics, and Society)
+    url: https://www.aies-conference.com/
+    frequency: annual
+    typical_month: August
+    relevance: medium
+    description: >
+      AI ethics. Covers pluralistic AI views, fairness in AI facilitation.
+
+  - name: ICCCI (Computational Collective Intelligence)
+    url: http://www.wikicfp.com/cfp/program?id=1302
+    frequency: annual
+    relevance: low
+    description: >
+      Computational collective intelligence. More technical/systems focused.
+
+  - name: MIT CCI Seminars
+    url: https://cci.mit.edu/events/
+    frequency: ongoing
+    relevance: medium
+    description: >
+      MIT Center for Collective Intelligence talks. Bakker is affiliated.
+      Good source for emerging work before publication.
+
+# ============================================
+# SEARCH TERMS
+# ============================================
+# For Google Scholar alerts and arxiv monitoring
+
+search_terms:
+  google_scholar_alerts:
+    - "AI facilitation"
+    - "AI mediation" deliberation
+    - "collective dialogue" AI
+    - "bridging algorithm" consensus
+    - "generative social choice"
+    - "democratic AI" alignment
+    - "AI peacebuilding"
+    - "computational deliberation"
+
+  arxiv_categories:
+    - cs.AI    # Artificial Intelligence
+    - cs.CL    # Computation and Language
+    - cs.HC    # Human-Computer Interaction
+    - cs.MA    # Multi-Agent Systems
+    - cs.GT    # Computer Science and Game Theory
+
+# ============================================
+# SEED PAPERS
+# ============================================
+# Landmark papers to track forward citations from
+
+seed_papers:
+  - id: arxiv:2503.01769
+    title: "Using Collective Dialogues and AI to Find Common Ground"
+    venue: FAccT 2025
+    why: Real-world AI-facilitated consensus across deeply divided groups
+
+  - id: doi:10.1126/science.adq2852
+    title: "AI can help humans find common ground in democratic deliberation"
+    venue: Science 2024
+    why: Habermas Machine — AI mediation outperforms human mediators
+
+  - id: arxiv:2309.01291
+    title: "Generative Social Choice"
+    venue: EC 2024 / JACM forthcoming
+    why: LLMs + social choice guarantees — theoretical foundation
+
+  - id: arxiv:2301.09976
+    title: "Bridging Systems"
+    venue: Knight/Columbia 2023
+    why: Defines the bridging framework used across multiple systems
+
+  - id: arxiv:2312.03893
+    title: "Deliberative Technology for Alignment"
+    venue: Preprint 2023
+    why: Position paper connecting deliberation infrastructure to AI alignment
+
+  - id: doi:10.1038/s41562-024-01959-9
+    title: "How large language models can reshape collective intelligence"
+    venue: Nature Human Behaviour 2024
+    why: Comprehensive review of LLMs + collective intelligence landscape
+
+  - id: arxiv:2411.09222
+    title: "Democratic AI is Possible: The Democracy Levels Framework"
+    venue: ICML 2025
+    why: Governance roadmap for democratizing AI alignment
