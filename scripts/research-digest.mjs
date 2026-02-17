@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 
 // OFL Research Digest
-// Queries Semantic Scholar for new papers from watchlist researchers and keywords,
+// Queries Semantic Scholar for new papers from watchlist researchers,
 // then posts a digest to Discord #research-insights.
+// Keyword discovery is handled separately via Google Scholar alerts (see scholar-alerts-setup.md).
 //
 // Usage:
 //   node scripts/research-digest.mjs              # dry run (stdout)
@@ -73,17 +74,6 @@ async function fetchAuthorPapers(authorId, since) {
   return data?.data || [];
 }
 
-async function fetchKeywordPapers(query, since) {
-  const params = new URLSearchParams({
-    query,
-    fields: PAPER_FIELDS,
-    limit: '10',
-    publicationDateOrYear: `${since}:`,
-    fieldsOfStudy: 'Computer Science,Political Science,Sociology',
-  });
-  const data = await s2Fetch(`/paper/search?${params}`);
-  return data?.data || [];
-}
 
 function formatAuthors(authors, maxCount = 3) {
   if (!authors || authors.length === 0) return 'Unknown';
@@ -104,26 +94,14 @@ function formatPaper(paper, context) {
   return line;
 }
 
-function buildDiscordMessage(authorPapers, keywordPapers) {
-  const totalCount = authorPapers.length + keywordPapers.length;
-  if (totalCount === 0) return null;
+function buildDiscordMessage(authorPapers) {
+  if (authorPapers.length === 0) return null;
 
   const parts = [];
-  parts.push(`**OFL Research Digest** — ${totalCount} new paper${totalCount !== 1 ? 's' : ''} (past ${LOOKBACK_DAYS} days)\n`);
+  parts.push(`**OFL Research Digest** — ${authorPapers.length} new paper${authorPapers.length !== 1 ? 's' : ''} from tracked researchers (past ${LOOKBACK_DAYS} days)\n`);
 
-  if (authorPapers.length > 0) {
-    parts.push('**━━━ Tracked Authors ━━━**');
-    for (const { paper, researcher } of authorPapers) {
-      parts.push(formatPaper(paper, `Author: ${researcher}`));
-    }
-  }
-
-  if (keywordPapers.length > 0) {
-    if (authorPapers.length > 0) parts.push('');
-    parts.push('**━━━ Keyword Matches ━━━**');
-    for (const { paper, query } of keywordPapers) {
-      parts.push(formatPaper(paper, `Matched: ${query}`));
-    }
+  for (const { paper, researcher } of authorPapers) {
+    parts.push(formatPaper(paper, `Author: ${researcher}`));
   }
 
   return parts.join('\n');
@@ -184,24 +162,8 @@ async function main() {
   }
   console.log(`Found ${authorPapers.length} papers from tracked authors.`);
 
-  // Collect keyword papers
-  const keywordPapers = [];
-  const queries = watchlist.search_terms?.google_scholar_alerts || [];
-  console.log(`Running ${queries.length} keyword searches...`);
-
-  for (const query of queries) {
-    const papers = await fetchKeywordPapers(query, since);
-    for (const paper of papers) {
-      if (!paper.paperId || seen.has(paper.paperId)) continue;
-      seen.add(paper.paperId);
-      keywordPapers.push({ paper, query });
-    }
-    await sleep(REQUEST_DELAY);
-  }
-  console.log(`Found ${keywordPapers.length} additional papers from keyword searches.`);
-
   // Build and send/print digest
-  const message = buildDiscordMessage(authorPapers, keywordPapers);
+  const message = buildDiscordMessage(authorPapers);
 
   if (!message) {
     console.log('\nNo new papers found. Skipping digest.');
