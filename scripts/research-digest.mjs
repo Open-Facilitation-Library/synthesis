@@ -148,17 +148,21 @@ async function main() {
 
   // Collect author papers
   const authorPapers = [];
-  const researchers = watchlist.researchers.filter(r => r.semantic_scholar_id);
+  // Support both semantic_scholar_id (string) and semantic_scholar_ids (array)
+  const researchers = watchlist.researchers.filter(r => r.semantic_scholar_id || r.semantic_scholar_ids);
   console.log(`Querying ${researchers.length} researchers...`);
 
   for (const r of researchers) {
-    const papers = await fetchAuthorPapers(r.semantic_scholar_id, since);
-    for (const paper of papers) {
-      if (!paper.paperId || seen.has(paper.paperId)) continue;
-      seen.add(paper.paperId);
-      authorPapers.push({ paper, researcher: r.name });
+    const ids = r.semantic_scholar_ids || [r.semantic_scholar_id];
+    for (const id of ids) {
+      const papers = await fetchAuthorPapers(id, since);
+      for (const paper of papers) {
+        if (!paper.paperId || seen.has(paper.paperId)) continue;
+        seen.add(paper.paperId);
+        authorPapers.push({ paper, researcher: r.name });
+      }
+      await sleep(REQUEST_DELAY);
     }
-    await sleep(REQUEST_DELAY);
   }
   console.log(`Found ${authorPapers.length} papers from tracked authors.`);
 
