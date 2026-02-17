@@ -1,0 +1,11 @@
+{
+  "name": "ofl-synthesis",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "digest": "node scripts/research-digest.mjs"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

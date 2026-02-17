@@ -23,6 +23,7 @@ researchers:
   - name: Andrew Konya
     affiliation: Remesh (Chief Science Officer)
     tier: core
+    semantic_scholar_id: "2265494907"
     scholar: https://scholar.google.com/citations?user=9JlvqbQAAAAJ
     website: https://andrewkonya.com/
     topics:
@@ -41,6 +42,7 @@ researchers:
   - name: Michiel A. Bakker
     affiliation: Google DeepMind / MIT Sloan
     tier: core
+    semantic_scholar_id: "50985185"
     scholar: https://scholar.google.com/citations?user=9H74p5MAAAAJ
     website: https://miba.dev/
     topics:
@@ -60,6 +62,7 @@ researchers:
   - name: Michael Henry Tessler
     affiliation: Google DeepMind
     tier: core
+    semantic_scholar_id: "37826548"
     scholar: https://scholar.google.com/citations?user=kFgWNMIAAAAJ
     topics:
       - AI mediation
@@ -75,6 +78,7 @@ researchers:
   - name: Luke Thorburn
     affiliation: King's College London
     tier: core
+    semantic_scholar_id: "1582672471"
     scholar: https://scholar.google.com/citations?user=VNF3f_QAAAAJ
     website: https://www.lukethorburn.com/
     topics:
@@ -95,6 +99,7 @@ researchers:
   - name: Ariel D. Procaccia
     affiliation: Harvard University
     tier: methods
+    semantic_scholar_id: "1689184"
     scholar: https://scholar.google.com/citations?user=8ZpV-lkAAAAJ
     website: https://procaccia.info/
     topics:
@@ -119,6 +124,7 @@ researchers:
   - name: Aviv Ovadya
     affiliation: AI & Democracy Foundation / Berkman Klein Center, Harvard
     tier: methods
+    semantic_scholar_id: "2153268"
     topics:
       - democratic AI governance
       - bridging systems
@@ -134,6 +140,7 @@ researchers:
   - name: Daniel Halpern
     affiliation: Harvard University
     tier: methods
+    semantic_scholar_id: "2128372"
     scholar: https://scholar.google.com/citations?user=RuXNlCIAAAAJ
     topics:
       - AI alignment axioms
@@ -150,6 +157,7 @@ researchers:
   - name: Christopher Summerfield
     affiliation: Google DeepMind / University of Oxford
     tier: methods
+    semantic_scholar_id: "2372244"
     topics:
       - AI mediation
       - democratic deliberation
@@ -163,6 +171,7 @@ researchers:
   - name: Martin Saveski
     affiliation: University of Washington
     tier: methods
+    semantic_scholar_id: "2459830"
     topics:
       - community notes / fact-checking
       - bridging algorithms at scale
@@ -175,6 +184,7 @@ researchers:
   - name: Divya Siddarth
     affiliation: Microsoft Research / Plurality Institute
     tier: methods
+    semantic_scholar_id: "2304957186"
     topics:
       - collective intelligence
       - plurality
@@ -188,6 +198,7 @@ researchers:
   - name: Amy X. Zhang
     affiliation: University of Washington
     tier: methods
+    semantic_scholar_id: "144518215"
     topics:
       - online deliberation platforms
       - democratic AI
@@ -201,6 +212,7 @@ researchers:
   - name: Lisa Schirch
     affiliation: University of Notre Dame, Kroc Institute / Toda Peace Institute
     tier: domain
+    semantic_scholar_id: "71595689"
     scholar: https://scholar.google.com/citations?user=Haf7FL0AAAAJ
     topics:
       - peacetech
@@ -219,6 +231,7 @@ researchers:
   - name: Oded Adomi Leshem
     affiliation: Hebrew University of Jerusalem
     tier: domain
+    semantic_scholar_id: "113461403"
     scholar: https://scholar.google.com/citations?user=Z_RDhsUAAAAJ
     topics:
       - conflict psychology
@@ -232,6 +245,7 @@ researchers:
   - name: Colin Irwin
     affiliation: University of Liverpool
     tier: domain
+    semantic_scholar_id: "2265495097"
     topics:
       - peace polls
       - democratic policy development
@@ -290,6 +304,7 @@ researchers:
   - name: Sara Fish
     affiliation: Harvard University
     tier: monitor
+    semantic_scholar_id: "2237778919"
     topics:
       - generative social choice
     key_papers:
@@ -300,6 +315,7 @@ researchers:
   - name: Itai Shapira
     affiliation: Harvard University
     tier: monitor
+    semantic_scholar_id: "1506141429"
     topics:
       - AI alignment axioms
       - social choice for AI
@@ -423,14 +439,14 @@ conferences:
 
 search_terms:
   google_scholar_alerts:
-    - "AI facilitation"
-    - "AI mediation" deliberation
-    - "collective dialogue" AI
-    - "bridging algorithm" consensus
-    - "generative social choice"
-    - "democratic AI" alignment
-    - "AI peacebuilding"
-    - "computational deliberation"
+    - '"AI facilitation" group'
+    - '"AI mediation" deliberation'
+    - '"collective dialogue" AI'
+    - '"bridging-based ranking"'
+    - '"generative social choice"'
+    - '"democratic AI" alignment LLM'
+    - '"AI peacebuilding"'
+    - '"AI-assisted deliberation"'
 
   arxiv_categories:
     - cs.AI    # Artificial Intelligence
