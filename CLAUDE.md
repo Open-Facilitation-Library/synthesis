@@ -4,13 +4,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Knowledge base, evaluation frameworks, and research monitoring for the [Open Facilitation Library](https://github.com/Open-Facilitation-Library). This is the cross-cutting research repo that informs all other OFL projects (workflows, skills, evals, cross-pollination).
+Knowledge base and research monitoring for the [Open Facilitation Library](https://github.com/Open-Facilitation-Library). This is the cross-cutting research repo that informs all other OFL projects (workflows, skills, evals, cross-pollination).
 
 ## Structure
 
 ```
 knowledge-base/          # Core concepts, glossary, methodology comparisons
-evals/                   # Why-How-Who evaluation framework
+evals/                   # Legacy eval content (active framework is in the evals repo)
 research/
   watchlist.yaml         # Researchers, conferences, search terms to monitor
   watchlist-candidates.md # Unvalidated researcher candidates
